@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&family=Space+Mono&display=swap');
+
+:root {
+    --space-mono-font: 'Space Mono', monospace;
+    --border-dark-subtle: #373838;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body * {
+    font-family: var(--space-mono-font);
+}
+
+/**
+Page Design
+*/
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('assests/pic.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    color: #fff; /* Set default text color to white for better contrast */
+}
+
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 3px;
+    text-align: center;
+    text-shadow: 0px 0px 3px #2020208c;
+}
+
+.border-dark-subtle {
+    border-color: var(--border-dark-subtle) !important;
+}
+
+/* Timer */
+#timer-wrapper {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border: 1px solid #beb8b8;
+    padding: 0.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Position relative for pseudo-elements */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for shadow */
+}
+
+#timer-wrapper .timer {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    position: relative; /* Position relative for inner glow */
+    z-index: 1; /* Ensure text is above the glow */
+}
+
+/* 3D effect on hover */
+#timer-wrapper:hover {
+    box-shadow: 
+        0 0 20px rgba(160, 225, 250, 0.5), /* Outer glow */
+        0 0 40px rgba(160, 225, 250, 0.3), /* Medium glow */
+        0 0 60px rgba(160, 225, 250, 0.2), /* Inner glow */
+        0 10px 30px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* Timer Buttons */
+#timer-buttons {
+    width: fit-content;
+    margin: 1em auto;
+    display: flex; /* Use flexbox to arrange buttons in a row */
+    gap: 0.5em; /* Space between buttons */
+}
+
+#timer-buttons .timer-btn {
+    display: flex; /* Show buttons */
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 1.3rem;
+    font-size: 1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#timer-buttons .timer-btn:hover {
+    background-color: #2015c0;
+}
+
+/* Lap Section */
+.lap-title {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 1em;
+    text-align: left;
+}
+
+#lapList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 200px;
+    background-color: #1a1818;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5em; /* Space above the lap list */
+}
+
+#lapList li {
+    padding: 1rem;
+    border-bottom: 1px solid #1d1c1c;
+}
+s
+#lapList li:last-child {
+    border-bottom: none;
+}
+
+#lapList li span {
+    font-weight: 700;
+}
