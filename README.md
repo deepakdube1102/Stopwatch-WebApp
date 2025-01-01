@@ -1,1 +1,1 @@
-https://deepakdube1102.github.io/PRODIGY_WD_02/
+https://deepakdube1102.github.io/Stopwatch-WebApp/
